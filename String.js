@@ -19,3 +19,16 @@
 // }
 // getLastIndex("hello, world! welcome to the world!","world");
 
+// Example 4: Extract a Substring using slice
+// function getSlice(str,start,end){
+//     console.log("Original String:", str);
+//     console.log("Scliced String:", str.slice(start,end));
+// }
+// getSlice("hello, world! welcome to the world!",7,12);
+
+// Example 5: Extract a Substring using substring
+function getSubstring(str,start,end){
+    console.log("Original String:", str);
+    console.log("Substring:", str.substring(start,end));
+}
+getSubstring("hello, world! welcome to the world!",7,12);
