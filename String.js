@@ -27,8 +27,15 @@
 // getSlice("hello, world! welcome to the world!",7,12);
 
 // Example 5: Extract a Substring using substring
-function getSubstring(str,start,end){
-    console.log("Original String:", str);
-    console.log("Substring:", str.substring(start,end));
-}
-getSubstring("hello, world! welcome to the world!",7,12);
+// function getSubstring(str,start,end){
+//     console.log("Original String:", str);
+//     console.log("Substring:", str.substring(start,end));
+// }
+// getSubstring("hello, world! welcome to the world!",7,12);
+
+// Example 6: One more example 
+const exampleString = "JavaScript is awesome!";
+let ans1 =exampleString.substr(0,10);
+let ans2 =exampleString.slice(0,10);
+console.log(ans1);
+console.log(ans2);
