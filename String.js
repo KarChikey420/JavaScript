@@ -34,8 +34,15 @@
 // getSubstring("hello, world! welcome to the world!",7,12);
 
 // Example 6: One more example 
-const exampleString = "JavaScript is awesome!";
-let ans1 =exampleString.substr(0,10);
-let ans2 =exampleString.slice(0,10);
-console.log(ans1);
-console.log(ans2);
+// const exampleString = "JavaScript is awesome!";
+// let ans1 =exampleString.substr(0,10);
+// let ans2 =exampleString.slice(0,10);
+// console.log(ans1);
+// console.log(ans2);
+
+// Example 7: Replace a substring
+function replaceSubstring(str,oldSub,newSub){
+    console.log("Original String:", str);
+    console.log("Replaced String:", str.replace(oldSub,newSub));
+}
+replaceSubstring("hello, world!","world","javascript");
