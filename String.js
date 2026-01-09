@@ -41,8 +41,17 @@
 // console.log(ans2);
 
 // Example 7: Replace a substring
-function replaceSubstring(str,oldSub,newSub){
-    console.log("Original String:", str);
-    console.log("Replaced String:", str.replace(oldSub,newSub));
-}
-replaceSubstring("hello, world!","world","javascript");
+// function replaceSubstring(str,oldSub,newSub){
+//     console.log("Original String:", str);
+//     console.log("Replaced String:", str.replace(oldSub,newSub));
+// }
+// replaceSubstring("hello, world!","world","javascript");
+
+// Example 8: split a string
+// function splitString(str,delimeter){
+//     console.log("original string:",str);
+//     console.log("split string:",str.split(delimeter));
+// }
+// splitString("hello, world!",",");
+
+// Example 9: some other inbuilt string methods is trim, toUpperCase, toLowerCase
