@@ -14,9 +14,11 @@ function squre(num){
     return num*num;
 }
 
-function sumOfSqure(num1,num2){
+function sumOfSqure(num1,num2,callback){
     sum=squre(num1)+squre(num2);
     return sum;
 }
-
-console.log(sumOfSqure(3,4));
+ const result=sumOfSqure(3,4,function(num){
+    return num*num;
+});
+ console.log("The sum of squre is:"+result);

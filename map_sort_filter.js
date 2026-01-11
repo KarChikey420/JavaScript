@@ -34,13 +34,13 @@
 //            1-json.stringify()
 //            2-json.parse()
 
-const student={
-    name:'kartikey',
-    age:22,
-    course:'MCA'
-}
-const jsonData=JSON.stringify(student);
-console.log("JSON Data:",jsonData);
+// const student={
+//     name:'kartikey',
+//     age:22,
+//     course:'MCA'
+// }
+// const jsonData=JSON.stringify(student);
+// console.log("JSON Data:",jsonData);
 
-const objData=JSON.parse(jsonData);
-console.log("Object Data:",objData);
+// const objData=JSON.parse(jsonData);
+// console.log("Object Data:",objData);
