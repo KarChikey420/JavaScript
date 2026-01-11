@@ -8,4 +8,15 @@
 // }
 // const result=sum(5,10,displayResult);
 
-// Example 2: 
+// Example 2: function returning another function
+
+function squre(num){
+    return num*num;
+}
+
+function sumOfSqure(num1,num2){
+    sum=squre(num1)+squre(num2);
+    return sum;
+}
+
+console.log(sumOfSqure(3,4));
