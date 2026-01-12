@@ -7,11 +7,9 @@ function addData(num){
     }
     return sum;
 }
-
 function process(){
     return addData(100);
 }
-
 setTimeout(() => {
     console.log(process());
 }, 1000);
