@@ -17,18 +17,18 @@
 
 // example 2 : using async and await
 
-function addData(){
-    let p=new Promise(function(resolve){
-        setTimeout(function(){
-            resolve("hii there!");
-        }, 1000)
-    });
-    return p;
-}
+// function addData(){
+//     let p=new Promise(function(resolve){
+//         setTimeout(function(){
+//             resolve("hii there!");
+//         }, 1000)
+//     });
+//     return p;
+// }
 
-async function process() {
-    let val= await addData()
-    console.log(val);
-}
+// async function process() {
+//     let val= await addData()
+//     console.log(val);
+// }
 
-process();
+// process();
