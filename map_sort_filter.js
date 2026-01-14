@@ -44,3 +44,26 @@
 
 // const objData=JSON.parse(jsonData);
 // console.log("Object Data:",objData);
+
+// Example 4 - Arrow functions-
+
+// const sum=(a,b)=>{
+//      return a+b;
+// }
+
+// const result=sum(5,10);
+// console.log("Sum is:",result);
+
+// Example 5 -map
+
+// const numbers=[1,2,3,4,5];
+
+// function transform(num){
+//     return num*2;
+// }
+
+// const transformed=numbers.map(transform);
+// console.log("Transformed Array:",transformed);
+
+// Examole 6 - filter
+
