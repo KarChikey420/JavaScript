@@ -1,0 +1,30 @@
+import express from 'express';
+
+const app = express();
+
+function authMiddleware(req,res,next){
+    if (username !='admin' || password !='admin123'){
+        res.status(403).json({
+            msg:'Invailid Credentials',
+        });
+    }
+    else{
+        next();
+    }
+};
+
+function kidneyIDMiddleware(req,res,next){
+    if (kidney_id!=1 && kidney_id!=2){
+        req.status(404).json({
+           msg:'Kidney ID not found',
+        });
+    }else{
+        next();
+    }
+}
+
+app.get('/data',authMiddleware,kidneyIDMiddleware,function(req,res){
+    res.send("Your kidney health is good.");
+});
+
+app.listen(3002,()=>console.log("Server running on port 3002"));
