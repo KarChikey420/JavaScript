@@ -3,11 +3,10 @@
 import jwt from 'jsonwebtoken';
 import express from 'express';
 
-const express=require('express');
-const jwt=require('jsonwebtoken');
 const jwtPassword='12345';
 
 const app=express();
+app.use(express.json());
 
 const AllUsers=[
     {id:1,username:'admin',password:'admin123'},
@@ -15,8 +14,8 @@ const AllUsers=[
 ]
 
 function UserExists(username,password){
-     const UserExists=false
-     for(let i;i<AllUsers.length;i++){
+     let UserExists=false
+     for(let i=0;i<AllUsers.length;i++){
         if (AllUsers[i].username==username && AllUsers[i].password==password){
             UserExists=true;
         }
@@ -25,8 +24,8 @@ function UserExists(username,password){
 }
 
 app.post('/signin',function(req,res){
-    const username=req.query.username;
-    const password=req.query.password;
+    const username=req.body.username;
+    const password=req.body.password;
     if(!UserExists(username,password)){
         return res.status(403).json({
             msg:'Invalid Credentials',
@@ -41,8 +40,11 @@ app.post('/signin',function(req,res){
 app.get('/userinfo',function(req,res){
     const token=req.headers['authorization'];
     try{
-        const decoded=jwt.verify(token,"shhhh");
+        const decoded=jwt.verify(token,jwtPassword);
         const username=decoded.username;
+        return res.json({
+            username:username,
+        });
     }catch(err){
         return res.status(401).json({
             msg:'Invalid Token',
@@ -50,4 +52,4 @@ app.get('/userinfo',function(req,res){
     }
 });
 
-app.listen(3000)
+app.listen(3003, () => console.log("Server running on port 3003"));
