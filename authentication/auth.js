@@ -15,8 +15,13 @@ const AllUsers=[
 ]
 
 function UserExists(username,password){
-
-
+     const UserExists=false
+     for(let i;i<AllUsers.length;i++){
+        if (AllUsers[i].username==username && AllUsers[i].password==password){
+            UserExists=true;
+        }
+     }
+     return UserExists;
 }
 
 app.post('/signin',function(req,res){
