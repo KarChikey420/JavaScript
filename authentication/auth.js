@@ -16,6 +16,7 @@ const AllUsers=[
 
 function UserExists(username,password){
 
+
 }
 
 app.post('/signin',function(req,res){
@@ -26,8 +27,22 @@ app.post('/signin',function(req,res){
             msg:'Invalid Credentials',
         });
     }
-    var token=jwt.sign({username:username},"shhhh");
+    var token=jwt.sign({username:username},jwtPassword);
     return res.json({
         token:token,
     });
 });
+
+app.get('/userinfo',function(req,res){
+    const token=req.headers['authorization'];
+    try{
+        const decoded=jwt.verify(token,"shhhh");
+        const username=decoded.username;
+    }catch(err){
+        return res.status(401).json({
+            msg:'Invalid Token',
+        });
+    }
+});
+
+app.listen(3000)
