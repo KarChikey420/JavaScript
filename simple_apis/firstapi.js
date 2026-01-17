@@ -25,4 +25,3 @@ app.get('/data',function(req,res){
     res.send("Your kidney health is good.");
 });
 
-app.listen(3001, () => console.log("Server running on port 3001"));
