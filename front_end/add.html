@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function addNumbers(){
+        const num1=document.getElementById("first number").value;
+        const num2=document.getElementById("second number").value;
+        const sum=parseInt(num1)+parseInt(num2);
+        const elements=document.getElementById("final sum");
+        elements.innerHTML="The sum is:"+sum;
+   }
+</script>
+
+<body>
+     <input id="first number"type="Text" placeholder="First number"></input><br><br>
+     <input id="second number" type="Text" placeholder="Second number"></input><br><br>
+     <button onclick="addNumbers()">Add</button><br><br>
+     <div id="final sum"> </div>
+</body>
+</html>
