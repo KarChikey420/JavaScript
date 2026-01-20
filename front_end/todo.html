@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let globelId=1;
+    let currentTodoState=[];
+    let oldTodoState=[];
+
+    function addTodo(){
+        const todoInput=document.getElementById("todoInput").value;
+        if(!todoInput.trim()) return;
+        const todo={
+            id:globelId,
+            text:todoInput,
+            completed:false
+        }
+        currentTodoState.push(todo);
+        globelId++;
+        document.getElementById("todoInput").value = "";
+        updateState();
+    }
+
+    function removeTodo(todoId){
+        currentTodoState = currentTodoState.filter(todo => todo.id !== todoId);
+        updateState();
+    }
+
+    function toggleTodo(todoId){
+        const todo = currentTodoState.find(t => t.id === todoId);
+        if(todo) {
+            todo.completed = !todo.completed;
+            updateState();
+        }
+    }
+
+    function updateState(){
+        const todoContainer = document.getElementById("todoContainer");
+        todoContainer.innerHTML = "";
+        
+        currentTodoState.forEach(todo => {
+            const todoDiv = document.createElement("div");
+            todoDiv.style.margin = "10px 0";
+            todoDiv.innerHTML = `
+                <span style="${todo.completed ? 'text-decoration: line-through;' : ''}">${todo.text}</span>
+                <button onclick="toggleTodo(${todo.id})">${todo.completed ? 'Undo' : 'Complete'}</button>
+                <button onclick="removeTodo(${todo.id})">Delete</button>
+            `;
+            todoContainer.appendChild(todoDiv);
+        });
+    }
+    
+</script>
+<body>
+    <h1>Todo App</h1>
+    <input type="text" id="todoInput" placeholder="Enter todo" onkeypress="if(event.key==='Enter') addTodo()">
+    <button onclick="addTodo()">Add Todo</button>
+    <div id="todoContainer"></div>
+</body>
+</html>
