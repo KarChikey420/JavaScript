@@ -1,8 +1,7 @@
-import  express from "express"
-import { createTodo,upadteTodo} from "./types.js"
+import express from "express"
+import { createTodo, updateTodo } from "./types.js"
 import { Todo } from "./db.js";
 
-const express=require("express");
 const app=express();
 
 app.use(express.json());
@@ -10,7 +9,7 @@ app.use(express.json());
 app.post("/todo",async function(req,res){
     const createPayload=req.body;
     const parsePayload=createTodo.safeParse(createPayload);
-    if(!parsePayload.sucess){
+    if(!parsePayload.success){
         res.status(400).json({
             msg:"Invalid Payload",
         })
@@ -36,16 +35,24 @@ app.get("/todos",async function(req,res){
 
 })
 
-app.put("/completed",function(req,res){
-    const upadtepayload=req.body;
-    const parsePayload=upadteTodo.safeParse(upadtepayload);
-    if(!parsePayload.sucess){
+app.put("/completed", async function(req,res){
+    const updatePayload=req.body;
+    const parsePayload=updateTodo.safeParse(updatePayload);
+    if(!parsePayload.success){
         res.status(400).json({
             msg:"Invalid Payload",
         })
+        return;
     }
 
-    Todo.create({
-
+    await Todo.updateOne({
+        _id:req.body.id
+    },{
+        completed:true
+    })
+    res.json({
+        msg:"Todo Updated Successfully",
     })
 })
+
+app.listen(3000, () => console.log("Server running on port 3000"));

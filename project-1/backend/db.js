@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
-mongoose.connect("mongodb+srv://negikartik780_db_user:sUQLhMU8scKGjpRg@cluster0.d7dxcbn.mongodb.net/Todo?retryWrites=true&w=majority")
+dotenv.config();
+
+mongoose.connect(process.env.mongo_link);
 console.log("Connected to MongoDB");
 
 const todoSchema = mongoose.Schema({
