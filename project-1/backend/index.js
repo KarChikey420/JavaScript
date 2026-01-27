@@ -1,12 +1,13 @@
 import  express from "express"
 import { createTodo,upadteTodo} from "./types.js"
+import { Todo } from "./db.js";
 
 const express=require("express");
 const app=express();
 
 app.use(express.json());
 
-app.post("/todo",function(req,res){
+app.post("/todo",async function(req,res){
     const createPayload=req.body;
     const parsePayload=createTodo.safeParse(createPayload);
     if(!parsePayload.sucess){
@@ -15,9 +16,23 @@ app.post("/todo",function(req,res){
         })
         return;
     }
+   await Todo.create({
+      title:createPayload.title,
+      description:createPayload.description,
+      completed:false,
+   })
+   res.json({
+    msg:"Todo Created Successfully",
+   })
 })
 
-app.get("/todos",function(req,res){
+app.get("/todos",async function(req,res){
+    const todos=await Todo.find();
+    console.log(todos);
+
+    res.json({
+        msg:"Todos fetched successfully",
+    })
 
 })
 
@@ -29,4 +44,8 @@ app.put("/completed",function(req,res){
             msg:"Invalid Payload",
         })
     }
+
+    Todo.create({
+
+    })
 })
