@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "first - npm init -y\r second - npm install typescript --save-dev\r third - npx tsc --init\r fourth - npx tsc a.ts",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

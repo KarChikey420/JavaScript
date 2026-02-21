@@ -1,2 +1,2 @@
-const x:number=1;
-console.log(x)
+let a:number=10;
+console.log(a);
