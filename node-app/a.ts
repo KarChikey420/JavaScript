@@ -1,4 +1,58 @@
-function greet(name:string){
-    console.log("Hello",name)
+// function greet(name:string){
+//     console.log("Hello",name)
+// }
+// greet("Kartikey")
+
+// function sum(a:number,b:number){
+//     return a+b;
+// }
+// let value=sum(1,2)
+// console.log(value)
+
+// function big(a:number,b:number):boolean{
+//     if (a>b){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+// let x=big(1,2)
+// console.log(x)
+
+
+// argument to function
+
+// function Runafter1s(fn: ()=> void){
+//     setTimeout(fn,1000)
+// }
+
+// Runafter1s(function (){
+//     console.log("Run after 1s")
+// })
+
+//Use of interfaces 
+
+interface User{
+    name:string,
+    lastname:string,
+    age:number,
+};
+
+function isLegal(user:User){
+    if (user.age>18){
+        return true;
+    }else{
+        return false;
+    }
 }
-greet("Kartikey")
+
+function greet(user:User){
+    console.log("Hello",user.name,user.lastname)
+}
+
+console.log(isLegal({
+    name:'kartikey',
+    lastname:'negi',
+    age:23
+})
+)
