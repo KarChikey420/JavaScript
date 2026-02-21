@@ -1,5 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let a = 10;
-console.log(a);
+function greet(name) {
+    console.log("Hello", name);
+}
+greet("Kartikey");
 //# sourceMappingURL=a.js.map

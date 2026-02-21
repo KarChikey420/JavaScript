@@ -1,5 +1,5 @@
-first - npm init -y
-second - npm install typescript --save-dev
-third - npx tsc --init
-fourth - npx tsc a.ts   
+first - npm install -g typescript
+second -  npm init -y
+third - tsc -b
+fourth -    
 
