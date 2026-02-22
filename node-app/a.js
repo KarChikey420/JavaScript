@@ -4,17 +4,8 @@
 // }
 // greet("Kartikey")
 Object.defineProperty(exports, "__esModule", { value: true });
-class Employee {
-    name;
-    age;
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
-    }
-    greet(phrase) {
-        console.log(`${phrase} ${this.name} and ${this.age}`);
-    }
+function greet(id) {
+    console.log("id is:", id);
 }
-const e = new Employee("kartikey", 23);
-e.greet("Hello, i am ");
+greet(1);
 //# sourceMappingURL=a.js.map

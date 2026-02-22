@@ -79,3 +79,13 @@
 
 // const e=new Employee("kartikey",23);
 // e.greet("Hello, i am ");
+
+// use of type keyword
+
+type greetArg= string | number
+
+function greet(id:greetArg){
+    console.log("id is:",id);
+}
+
+greet(1)
