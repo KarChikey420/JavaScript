@@ -4,8 +4,9 @@
 // }
 // greet("Kartikey")
 Object.defineProperty(exports, "__esModule", { value: true });
-function greet(id) {
-    console.log("id is:", id);
-}
-greet(1);
+const info = {
+    name: "kartikey",
+    department: "b2c",
+    date: new Date()
+};
 //# sourceMappingURL=a.js.map

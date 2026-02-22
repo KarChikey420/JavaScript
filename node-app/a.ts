@@ -89,3 +89,22 @@
 // }
 
 // greet(1)
+
+//intersaction the type 
+
+type Employee={
+    name:string;
+    date:Date;
+}
+
+type Manager={
+    name:string;
+    department:string;
+}
+
+type Techlead= Employee & Manager
+const info : Techlead={
+    name:"kartikey",
+    department:"b2c",
+    date:new Date()
+}
