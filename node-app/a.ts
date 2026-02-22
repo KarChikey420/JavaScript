@@ -57,24 +57,25 @@
 // })
 // )
 
-interface User{
-    name:string,
-    age:number,
-    greet(phrase:string):void;
-}
+//--------using class and interface----------
+// interface User{
+//     name:string,
+//     age:number,
+//     greet(phrase:string):void;
+// }
 
-class Employee implements User{
-    name:string;
-    age:number;
+// class Employee implements User{
+//     name:string;
+//     age:number;
 
-    constructor(name:string,age:number){
-          this.name=name;
-          this.age=age;
-    }
-    greet(phrase: string): void {
-        console.log(`${phrase} ${this.name} and ${this.age}`);
-    }
-}
+//     constructor(name:string,age:number){
+//           this.name=name;
+//           this.age=age;
+//     }
+//     greet(phrase: string): void {
+//         console.log(`${phrase} ${this.name} and ${this.age}`);
+//     }
+// }
 
-const e=new Employee("kartikey",23);
-e.greet("Hello, i am ");
+// const e=new Employee("kartikey",23);
+// e.greet("Hello, i am ");
