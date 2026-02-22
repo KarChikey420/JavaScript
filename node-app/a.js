@@ -4,21 +4,17 @@
 // }
 // greet("Kartikey")
 Object.defineProperty(exports, "__esModule", { value: true });
-;
-function isLegal(user) {
-    if (user.age > 18) {
-        return true;
+class Employee {
+    name;
+    age;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
     }
-    else {
-        return false;
+    greet(phrase) {
+        console.log(`${phrase} ${this.name} and ${this.age}`);
     }
 }
-function greet(user) {
-    console.log("Hello", user.name, user.lastname);
-}
-console.log(isLegal({
-    name: 'kartikey',
-    lastname: 'negi',
-    age: 23
-}));
+const e = new Employee("kartikey", 23);
+e.greet("Hello, i am ");
 //# sourceMappingURL=a.js.map
