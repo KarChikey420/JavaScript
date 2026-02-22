@@ -82,10 +82,10 @@
 
 // use of type keyword
 
-type greetArg= string | number
+// type greetArg= string | number
 
-function greet(id:greetArg){
-    console.log("id is:",id);
-}
+// function greet(id:greetArg){
+//     console.log("id is:",id);
+// }
 
-greet(1)
+// greet(1)
