@@ -103,20 +103,33 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // ];
 // console.log(new Employee().getAdults(users));
 // enums in typescript is used to define a set of named constants
-var Direction;
-(function (Direction) {
-    Direction[Direction["Up"] = 0] = "Up";
-    Direction[Direction["Down"] = 1] = "Down";
-    Direction[Direction["Left"] = 2] = "Left";
-    Direction[Direction["Right"] = 3] = "Right";
-})(Direction || (Direction = {}));
-function doSomething(keyPressed) {
-    if (keyPressed == Direction.Up) {
-        return true;
-    }
-    else {
-        return false;
-    }
+// enum Direction{
+//     Up,
+//     Down,
+//     Left,
+//     Right
+// }
+// function doSomething(keyPressed:Direction){
+//     if (keyPressed==Direction.Up){
+//         return true
+//     }
+//     else{
+//         return false
+//     }
+// }
+// console.log(doSomething(Direction.Up))
+//generics in typescript
+//problem ------
+// type Input= number | string
+// function first_number(arr:Input[]){
+//     return arr[0]
+// }
+// const value=first_number([1,2,"kartikey"])
+// console.log(value.toUpperCase) *****************
+function identity(args) {
+    return args;
 }
-console.log(doSomething(Direction.Up));
+let output1 = identity(20);
+let output2 = identity("kartikey");
+console.log(output1, output2);
 //# sourceMappingURL=a.js.map
