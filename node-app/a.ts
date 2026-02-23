@@ -155,12 +155,12 @@
 // const value=first_number([1,2,"kartikey"])
 // console.log(value.toUpperCase) *****************
 
+// solution of the problem
+// function identity<T>(args:T){
+//     return args
+// }
 
-function identity<T>(args:T){
-    return args
-}
+// let output1=identity(20)
+// let output2=identity("kartikey")
 
-let output1=identity(20)
-let output2=identity("kartikey")
-
-console.log(output1,output2)
+// console.log(output1,output2)
