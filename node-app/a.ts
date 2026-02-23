@@ -164,3 +164,10 @@
 // let output2=identity("kartikey")
 
 // console.log(output1,output2)
+
+function identity<T>(arr:T[]):T|undefined{
+    return arr[0]
+}
+
+const output=identity<string>(["kartikey","hritik"])
+if (output) console.log(output.toUpperCase())

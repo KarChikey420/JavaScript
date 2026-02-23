@@ -126,10 +126,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // }
 // const value=first_number([1,2,"kartikey"])
 // console.log(value.toUpperCase) *****************
-function identity(args) {
-    return args;
+// solution of the problem
+// function identity<T>(args:T){
+//     return args
+// }
+// let output1=identity(20)
+// let output2=identity("kartikey")
+// console.log(output1,output2)
+function identity(arr) {
+    return arr[0];
 }
-let output1 = identity(20);
-let output2 = identity("kartikey");
-console.log(output1, output2);
+const output = identity(["kartikey", "hritik"]);
+if (output)
+    console.log(output.toUpperCase());
 //# sourceMappingURL=a.js.map
