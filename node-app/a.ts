@@ -110,19 +110,19 @@
 // }
 
 // array in Typescript
-interface User{
-    name:string;
-    age:number;
-}
-class Employee{
-    getAdults(users: User[]):User[]{
-        return users.filter(x => x.age>18);
-    }
-}
+// interface User{
+//     name:string;
+//     age:number;
+// }
+// class Employee{
+//     getAdults(users: User[]):User[]{
+//         return users.filter(x => x.age>18);
+//     }
+// }
 
-const users:User[]=[
-    {name:'A', age:17},
-    {name:'B', age:22},
-];
-console.log(new Employee().getAdults(users));
+// const users:User[]=[
+//     {name:'A', age:17},
+//     {name:'B', age:22},
+// ];
+// console.log(new Employee().getAdults(users));
 
