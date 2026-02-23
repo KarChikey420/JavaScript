@@ -128,20 +128,21 @@
 
 // enums in typescript is used to define a set of named constants
 
-enum Direction{
-    Up,
-    Down,
-    Left,
-    Right
-}
+// enum Direction{
+//     Up,
+//     Down,
+//     Left,
+//     Right
+// }
 
-function doSomething(keyPressed:Direction){
-    if (keyPressed==Direction.Up){
-        return true
-    }
-    else{
-        return false
-    }
-}
+// function doSomething(keyPressed:Direction){
+//     if (keyPressed==Direction.Up){
+//         return true
+//     }
+//     else{
+//         return false
+//     }
+// }
 
-console.log(doSomething(Direction.Up))
+// console.log(doSomething(Direction.Up))
+
