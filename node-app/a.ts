@@ -82,7 +82,7 @@
 
 // use of type keyword
 
-// type greetArg= string | number
+// type greetArg= string | number as union
 
 // function greet(id:greetArg){
 //     console.log("id is:",id);
@@ -90,7 +90,7 @@
 
 // greet(1)
 
-//intersaction the type 
+//------------intersaction the type----------------- 
 
 // type Employee={
 //     name:string;
@@ -108,4 +108,21 @@
 //     department:"b2c",
 //     date:new Date()
 // }
+
+// array in Typescript
+interface User{
+    name:string;
+    age:number;
+}
+class Employee{
+    getAdults(users: User[]):User[]{
+        return users.filter(x => x.age>18);
+    }
+}
+
+const users:User[]=[
+    {name:'A', age:17},
+    {name:'B', age:22},
+];
+console.log(new Employee().getAdults(users));
 
