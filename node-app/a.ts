@@ -146,3 +146,12 @@
 
 // console.log(doSomething(Direction.Up))
 
+//generics in typescript
+//problem ------
+// type Input= number | string
+// function first_number(arr:Input[]){
+//     return arr[0]
+// }
+// const value=first_number([1,2,"kartikey"])
+// console.log(value.toUpperCase) *****************
+
