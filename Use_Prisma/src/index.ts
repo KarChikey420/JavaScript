@@ -28,3 +28,4 @@ async function insertUser(email:string,username:string,password:string,firstName
    })
    console.log(user);
 }
+insertUser("test@example.com","testuser","password123","Test","User");

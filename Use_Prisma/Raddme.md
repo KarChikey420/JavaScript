@@ -5,3 +5,5 @@
 4-npx prisma init
 5-npx prisma migrate dev
 6-npx prisma generate
+7-tsc -b
+8-npx tsc -b
