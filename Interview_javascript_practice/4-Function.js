@@ -15,3 +15,11 @@
 // (function add(num1,num2){
 //     console.log(num1+num2);
 // }(5,10));
+
+//Arrow function
+
+const MyName=(name)=>{
+    console.log("my name is"+""+name);
+}
+
+MyName("Kartikey");
