@@ -39,3 +39,26 @@ function createbase(num){
 
 var add5 = createbase(5);
 add5(10);
+
+//time optimization using closure
+
+function createFinder() {
+    let a = [];
+    for (let i = 0; i < 1000000; i++) {
+        a[i] = i * i;
+    }
+
+    return function find(index) {
+        console.log(a[index]);
+    };
+}
+
+const find = createFinder();
+
+console.time("6");
+find(5);
+console.timeEnd("6");
+
+console.time("7");
+find(12);
+console.timeEnd("7");
