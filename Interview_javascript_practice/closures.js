@@ -30,3 +30,12 @@ Outer()(5)
  }
  console.log(sum(1)(2)(3)(4));
 
+// write a function that would allow you to do this
+function createbase(num){
+    return function(innernum){
+        console.log(num+innernum);
+    }
+}
+
+var add5 = createbase(5);
+add5(10);
