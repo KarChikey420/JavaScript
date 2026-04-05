@@ -1,6 +1,4 @@
-import Image from "next/image";
 import axios from "axios";
-import { asyncWrapProviders } from "async_hooks";
 
 async function getData(){
   const response=await axios.get("http://192.168.56.1:3000/api/user")
