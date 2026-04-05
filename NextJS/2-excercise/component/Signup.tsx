@@ -1,5 +1,6 @@
 "use client";
 
+import axios from "axios";
 import type { FormEvent } from "react";
 import { useState } from "react";
 
@@ -64,19 +65,19 @@ export function Signup() {
             />
           </label>
 
-          <button
+          <button onClick={()=>{
+            axios.post("http://localhost:3000/api/user", {
+              username,
+              email,
+              password
+            })
+          }}
             type="submit"
             className="w-full rounded-2xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
           >
             Sign up
           </button>
         </form>
-
-        {submitted ? (
-          <p className="mt-5 rounded-2xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-200">
-            Account details captured for {username || "your account"}.
-          </p>
-        ) : null}
       </section>
     </main>
   );
