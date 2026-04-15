@@ -20,3 +20,25 @@ do{
     console.log(j);
     j++;
 }while(j<5)
+
+//4. for of loop
+
+let arr=[1,2,3,4,5];
+for(let num of arr){
+    if (num%2===0){
+        console.log(num);
+    }
+}
+
+//5. for in loop 
+let obj={
+    name:'KARTIKEY',
+    age:23,
+    city:'GURUGRAM'
+}
+
+for (let key in obj){
+    if (obj[key]==='GURUGRAM'){
+        console.log(key);
+    }
+}
