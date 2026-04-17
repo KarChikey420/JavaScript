@@ -22,3 +22,10 @@ const MyName=(name)=>{
 }
 
 MyName("Kartikey");
+
+//annonymous function
+
+console.log(function(num){
+    return num*num;
+})(4);
+
