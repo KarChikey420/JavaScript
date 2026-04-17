@@ -18,9 +18,14 @@ console.log("after settimeout");
 const myPromise=new Promise((resolve,reject)=>{
     const success=true;
     if (success){
-        resolve("promise resolved sucessfully");
+        resolve("Promise resolved successfully");
     }else{
         reject("promise rejected");
     }
+});
+
+myPromise.then((message)=>{
+    console.log(message);
+}).catch((error)=>{
+    console.log(error);
 })
- console.log(myPromise);
